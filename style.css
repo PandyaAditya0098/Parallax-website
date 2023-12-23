@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100vh;
+    /* overflow-y: auto; To scroll on vertical axis for image */
+    overflow-x: hidden;  /* We not went to scroll in horizontal axis so its hidden */
+    perspective: 10px;  /* To enable 3D view in Z-axis *** */
+}
+
+.container{
+    position: relative;  /* because we went to position images according to this parrent element */
+    height: 100%;
+    display: flex;  /* because we went Adventure text in center */
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    align-items: center;
+    transform-style: preserve-3d; /* To preserve 3D style we set on element */
+    z-index: -1;
+}
+
+.background{
+     transform: translateZ(-39px) scale(5); /* ** */
+}
+
+.foreground{
+    transform: translateZ(-20px) scale(3); /* ** */
+}
+
+.background, .foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* This property is used to specify how an img or video should be resized to fit its container */
+    z-index: -1;  /* this property is used to specify which layer is visible first in 3D layer */
+
+}
+
+h1{
+    position: absolute;
+    top: 5rem;
+    letter-spacing: 4px;
+    font-size: 7rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+section{
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding:2rem 0;
+}
+
+.secHeading{
+    font-size: 5rem;
+    padding: 0 10rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.para{
+    padding: 0 10rem;
+    margin: 2rem 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.desc{
+    position: absolute;
+    border-radius: 10px;
+    background-color: white;
+    font-family: 'Oswald', sans-serif;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: black;
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+
+.bg1{
+    background-image: url(Images/sport-1.jpg);
+}
+
+.bg2{
+    background-image: url(Images/sport-2.jpg);
+}
+
+.bg3{
+    background-image: url(Images/sport-3.jpg);
+}
